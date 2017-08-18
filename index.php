@@ -20,10 +20,17 @@ require_once("config.php");
 // $usuario->login("anthony", "123456");
 // echo $usuario;
 
-$aluno = new Usuario("aluno", "@lun0");
+// Criando um novo usuario
+// $aluno = new Usuario("aluno", "@lun0");
+// $aluno->insert();
+// echo $aluno;
 
-$aluno->insert();
+$usuario = new Usuario();
 
-echo $aluno;
+$usuario->loadById(26);
+
+$usuario->update("professor", "!@#¨%¨&*");
+
+echo $usuario;
 
 ?>
